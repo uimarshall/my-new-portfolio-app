@@ -23,5 +23,5 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'import/no-absolute-path': 0,
   },
-  ignorePatterns: ['vite.config.ts', 'postcss.config.js', 'tailwind.config.js'],
+  ignorePatterns: ['vite.config.ts', 'postcss.config.js'],
 };
