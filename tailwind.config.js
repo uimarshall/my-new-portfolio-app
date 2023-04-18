@@ -23,7 +23,7 @@ export default {
           'linear-gradient(257.1deg, #AE5BD6 27.51%, #4052F0 113.53%)',
         'gradient-bluepink':
           'linear-gradient(234.04deg, #7F38DA 0%, #4052F0 71.02%)',
-        'project-img': 'url(./assets/dev.jpg)',
+        'project-bg-img': 'url(./assets/dev.jpg)',
       }),
       fontFamily: {
         neogrotesque: ['Roboto', 'sans-serif'],
