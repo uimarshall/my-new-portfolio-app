@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="app bg-gray-10">
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-      <h1 className="text-3xl font-bold underline">My Portfolio!</h1>
     </div>
   );
 }

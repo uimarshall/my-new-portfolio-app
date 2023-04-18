@@ -1,8 +1,13 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable import/extensions */
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import Logo from '@/assets/logo.png';
+import useMediaQuery from '@/hooks/useMediaQuery';
 import Link from './Link';
 import SelectedPage from '../../shared/types';
+
+import ActionButton from '../../shared/ActionButton';
 
 type Props = {
   selectedPage: SelectedPage;
@@ -47,11 +52,14 @@ function Navbar({ selectedPage, setSelectedPage }: Props) {
                 </div>
                 <div className={`${flexBetween} gap-8`}>
                   <p>Github</p>
-                  <button>LinkedIn</button>
+                  <ActionButton setSelectedPage={setSelectedPage}>
+                    LinkedIn
+                  </ActionButton>
                 </div>
               </div>
             ) : (
               <button
+                type="submit"
                 className="bg-secondary-500 rounded-full p-2"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
