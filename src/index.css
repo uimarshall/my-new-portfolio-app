@@ -11,5 +11,5 @@ body,
   height: 100%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  @apply text-gray-200; /*default text color*/
+  @apply text-gray-400; /*default text color*/
 }
