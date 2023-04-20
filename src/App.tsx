@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/layout/Navbar';
 import SelectedPage from './shared/types';
+import Home from './components/pages/Home';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -29,14 +30,7 @@ function App() {
         setSelectedPage={setSelectedPage}
         isTopOfPage={isTopOfPage}
       />
-      <div className="mx-auto mt-10 flex flex-col justify-center">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-          voluptas, doloremque quaerat autem dolorem, quibusdam laudantium
-          facere corporis, odio sit blanditiis officiis exercitationem adipisci!
-          Culpa voluptatibus ducimus atque vitae velit?
-        </p>
-      </div>
+      <Home setSelectedPage={setSelectedPage} />
     </div>
   );
 }
