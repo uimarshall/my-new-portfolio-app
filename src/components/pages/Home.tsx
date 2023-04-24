@@ -1,13 +1,23 @@
 import { motion } from 'framer-motion';
-import emoji from '@/assets/emoji_raised_hands.png';
-import SelectedPage from '@/shared/types';
+import {
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+  AiFillMediumCircle,
+  AiFillGithub,
+} from 'react-icons/ai';
+import emoji from '../../assets/emoji_raised_hand.png';
 import Header from '../layout/Header';
+import SelectedPage from '../../shared/types';
+import SocialMediaHandles from '../../shared/SocialMediaHandles';
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 function Home({ setSelectedPage }: Props) {
+  const flexBetween = 'flex items-center justify-between';
+  const style = { fontSize: '1.5em', borderRadius: '9999px' };
+
   return (
     <section id="home" className="bg-gray-20 gap-16 py-10 md:h-full md:pb-0">
       {/* IMAGE AND MAIN HEADER */}
@@ -33,6 +43,7 @@ function Home({ setSelectedPage }: Props) {
               <div className="md:before:content-evolvetext before:absolute before:-left-20 before:-top-20 before:z-[-1]">
                 <img alt="home-page-text" src={emoji} />
               </div>
+              <p className="text-back">Pretty code by ingenious person</p>
             </div>
 
             <Header>
@@ -56,9 +67,25 @@ function Home({ setSelectedPage }: Props) {
             }}
           >
             {/* SOCIAL MEDIA */}
-            <div>
-              <p>social media</p>
-            </div>
+            <section className={`${flexBetween} gap-8`}>
+              <div>
+                <p className="text-sm">My works in social networks</p>
+              </div>
+              <div className={`${flexBetween} gap-4`}>
+                <SocialMediaHandles href="https://twitter.com/uimarshall">
+                  <AiFillTwitterCircle style={style} />
+                </SocialMediaHandles>
+                <SocialMediaHandles href="https://www.linkedin.com/in/marshall-akpan/">
+                  <AiFillLinkedin style={style} />
+                </SocialMediaHandles>
+                <SocialMediaHandles href="https://medium.com/@uimarshall">
+                  <AiFillMediumCircle style={style} />
+                </SocialMediaHandles>
+                <SocialMediaHandles href="https://github.com/uimarshall">
+                  <AiFillGithub style={style} />
+                </SocialMediaHandles>
+              </div>
+            </section>
           </motion.div>
         </div>
 
