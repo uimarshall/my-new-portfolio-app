@@ -43,7 +43,7 @@ export default {
         geometricsans: ['Poppins', 'sans-serif'],
       },
       content: {
-        projecttext: 'url(./assets/contract.jpg)',
+        patternbackground: 'url(./assets/background_pattern_bottom.png)',
       },
     },
     screens: {

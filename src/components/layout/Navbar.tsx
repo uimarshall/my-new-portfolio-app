@@ -2,12 +2,12 @@
 /* eslint-disable import/extensions */
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
-import Logo from '@/assets/logo.png';
-import useMediaQuery from '@/hooks/useMediaQuery';
+import Logo from '../../assets/logo.png';
 import Link from './Link';
 import SelectedPage from '../../shared/types';
 
 import ActionButton from '../../shared/ActionButton';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 type Props = {
   isTopOfPage: boolean;
@@ -31,7 +31,7 @@ function Navbar({ isTopOfPage, selectedPage, setSelectedPage }: Props) {
             <img src={Logo} alt="company logo" className="w-10" />
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
-                <div className={`${flexBetween} gap-8 text-sm`}>
+                <div className={`${flexBetween} gap-8 text-sm text-black`}>
                   <Link
                     page="Intro"
                     selectedPage={selectedPage}
@@ -54,8 +54,16 @@ function Navbar({ isTopOfPage, selectedPage, setSelectedPage }: Props) {
                     setSelectedPage={setSelectedPage}
                   />
                 </div>
-                <div className={`${flexBetween} gap-8`}>
-                  <p>Github</p>
+                <div className={`${flexBetween} gap-8 text-black`}>
+                  {/* <p className="pointer:cursor hover:text-primary-50">Github</p> */}
+                  <a
+                    className="inline-block hover:text-primary-50"
+                    href="https://github.com/uimarshall"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Github
+                  </a>
                   <ActionButton setSelectedPage={setSelectedPage}>
                     LinkedIn
                   </ActionButton>
