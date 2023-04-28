@@ -5,6 +5,7 @@ import {
   AiFillMediumCircle,
   AiFillGithub,
 } from 'react-icons/ai';
+import { BsBoxArrowRight } from 'react-icons/bs';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import emoji from '../../assets/emoji_raised_hand.png';
 import ProfileImg from '../../assets/programmer_illustrator.svg';
@@ -22,7 +23,7 @@ function Home({ setSelectedPage }: Props) {
   const style = { fontSize: '1.5em', borderRadius: '9999px' };
 
   return (
-    <section id="home" className="bg-gray-20 gap-16 py-10 md:h-full md:pb-0">
+    <section id="intro" className="bg-gray-20 gap-16 py-10 md:h-full md:pb-0">
       {/* IMAGE AND MAIN HEADER */}
       <motion.div
         className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
@@ -61,7 +62,7 @@ function Home({ setSelectedPage }: Props) {
 
           {/* ACTIONS */}
           <motion.div
-            className="mt-8 flex items-center gap-8"
+            className="mb-4 mt-8 flex items-center gap-8 pb-4"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -73,9 +74,12 @@ function Home({ setSelectedPage }: Props) {
           >
             <ActionButton setSelectedPage={setSelectedPage}>
               Resume
+              <span className="px-2  duration-300 group-hover:rotate-90">
+                <BsBoxArrowRight size={20} />
+              </span>
             </ActionButton>
             <AnchorLink
-              className="text-sm font-bold text-primary-300 hover:text-primary-500 hover:underline"
+              className="cursor-pointer text-sm font-bold text-primary-300 duration-200 hover:scale-110 hover:text-primary-500 hover:underline"
               onClick={() => setSelectedPage(SelectedPage.Portfolio)}
               href={`#${SelectedPage.Portfolio}`}
             >
@@ -93,22 +97,36 @@ function Home({ setSelectedPage }: Props) {
         </div>
       </motion.div>
       {/* SOCIAL MEDIA */}
-      <section className="mx-auto flex w-5/6 items-center  justify-start gap-8 py-4">
+
+      {/* TODO: REFACTOR USING CONSTANTS, Use useId hook for the Ids */}
+      <section className="mx-auto flex w-5/6 items-center justify-start gap-8 py-4">
         <div>
           <p className="text-sm">My works in social networks</p>
         </div>
         <div className={`${flexBetween} gap-4`}>
           <SocialMediaHandles href="https://twitter.com/uimarshall">
-            <AiFillTwitterCircle style={style} />
+            <AiFillTwitterCircle
+              style={style}
+              className="duration-200 hover:scale-150"
+            />
           </SocialMediaHandles>
           <SocialMediaHandles href="https://www.linkedin.com/in/marshall-akpan/">
-            <AiFillLinkedin style={style} />
+            <AiFillLinkedin
+              style={style}
+              className="duration-200 hover:scale-150"
+            />
           </SocialMediaHandles>
           <SocialMediaHandles href="https://medium.com/@uimarshall">
-            <AiFillMediumCircle style={style} />
+            <AiFillMediumCircle
+              style={style}
+              className="duration-200 hover:scale-150"
+            />
           </SocialMediaHandles>
           <SocialMediaHandles href="https://github.com/uimarshall">
-            <AiFillGithub style={style} />
+            <AiFillGithub
+              style={style}
+              className="duration-200 hover:scale-150"
+            />
           </SocialMediaHandles>
         </div>
       </section>

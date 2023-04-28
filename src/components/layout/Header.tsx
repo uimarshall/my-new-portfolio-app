@@ -1,9 +1,11 @@
-type Props = { children: string };
+type Props = { children: React.ReactNode };
 
 function Header({ children }: Props) {
   return (
     <header>
-      <p className="mt-8 text-sm">{children}</p>
+      <h1 className="inline basis-3/5 border-b-4 border-primary-50 font-geometricsans text-3xl font-bold text-black">
+        {children}
+      </h1>
     </header>
   );
 }

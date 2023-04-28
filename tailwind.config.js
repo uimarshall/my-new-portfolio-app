@@ -41,6 +41,8 @@ export default {
       fontFamily: {
         neogrotesque: ['Roboto', 'sans-serif'],
         geometricsans: ['Poppins', 'sans-serif'],
+        cursive: ['Great Vibes', 'cursive'],
+        rail: ['Raleway', 'sans-serif'],
       },
       content: {
         patternbackground: 'url(./assets/background_pattern_bottom.png)',
