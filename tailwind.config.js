@@ -24,6 +24,7 @@ export default {
         'gray-200': '#FFDACC',
         'gray-300': '#423B39',
         'gray-400': '#727274',
+        'gray-500': '#423B39',
       },
       backgroundImage: (theme) => ({
         'gradient-lightgray-1':
