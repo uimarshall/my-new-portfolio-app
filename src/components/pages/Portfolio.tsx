@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../layout/Header';
 import SelectedPage from '../../shared/types';
@@ -9,12 +9,14 @@ import ReactJs from '../../assets/networking.jpg';
 import Html from '../../assets/html-css-js.jpg';
 import Ruby from '../../assets/computers2.png';
 import NextJs from '../../assets/web-dev6.jpg';
+import Modal from '../../shared/Modal';
 
 // continue from 1:15
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 function Portfolio({ setSelectedPage }: Props) {
+  const [showModal, setShowModal] = useState<boolean>(false);
   const projects = [
     { id: 1, src: NodeJs },
     { id: 2, src: Dev },
@@ -89,6 +91,7 @@ function Portfolio({ setSelectedPage }: Props) {
                         type="button"
                         className="bg-primary-300 px-4 py-2
 											text-sm text-white"
+                        onClick={() => setShowModal(true)}
                       >
                         See the project
                       </button>
@@ -117,6 +120,19 @@ function Portfolio({ setSelectedPage }: Props) {
 
         {/* GRID 3 COLS */}
       </motion.div>
+      <Modal isVisible={showModal} onClose={() => setShowModal(false)}>
+        {/* <Modal title="go on" /> */}
+
+        <div className="lg:w-2/5 xl:w-2/5 m-3 overflow-hidden rounded shadow-lg sm:w-full md:w-2/5">
+          <img src="https://picsum.photos/1000/600" alt="place" />
+          <div className="m-1 px-6 py-2 text-4xl font-bold underline">
+            <a href="nnnn">Example Title</a>
+          </div>
+          <div>
+            <h1>Other contents goes here</h1>
+          </div>
+        </div>
+      </Modal>
     </section>
   );
 }
