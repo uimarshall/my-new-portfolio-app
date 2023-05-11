@@ -24,6 +24,7 @@ export default {
         'gray-200': '#FFDACC',
         'gray-300': '#423B39',
         'gray-400': '#727274',
+        'gray-500': '#423B39',
       },
       backgroundImage: (theme) => ({
         'gradient-lightgray-1':
@@ -41,6 +42,8 @@ export default {
       fontFamily: {
         neogrotesque: ['Roboto', 'sans-serif'],
         geometricsans: ['Poppins', 'sans-serif'],
+        cursive: ['Great Vibes', 'cursive'],
+        rail: ['Raleway', 'sans-serif'],
       },
       content: {
         patternbackground: 'url(./assets/background_pattern_bottom.png)',

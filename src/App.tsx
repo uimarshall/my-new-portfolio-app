@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/layout/Navbar';
 import SelectedPage from './shared/types';
 import Home from './components/pages/Home';
+import Portfolio from './components/pages/Portfolio';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -31,6 +33,7 @@ function App() {
         isTopOfPage={isTopOfPage}
       />
       <Home setSelectedPage={setSelectedPage} />
+      <Portfolio setSelectedPage={setSelectedPage} />
     </main>
   );
 }

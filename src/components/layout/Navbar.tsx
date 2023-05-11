@@ -2,7 +2,7 @@
 /* eslint-disable import/extensions */
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
-import Logo from '../../assets/logo.png';
+// import Logo from '../../assets/logo.png';
 import Link from './Link';
 import SelectedPage from '../../shared/types';
 
@@ -28,7 +28,10 @@ function Navbar({ isTopOfPage, selectedPage, setSelectedPage }: Props) {
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
-            <img src={Logo} alt="company logo" className="w-10" />
+            {/* <img src={Logo} alt="company logo" className="w-10" /> */}
+            <span className="w-10 font-cursive text-2xl font-extrabold capitalize text-primary-300">
+              Marshall
+            </span>
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
                 <div className={`${flexBetween} gap-8 text-sm text-black`}>
