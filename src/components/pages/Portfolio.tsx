@@ -124,7 +124,11 @@ function Portfolio({ setSelectedPage }: Props) {
         {/* <Modal title="go on" /> */}
 
         <div className="lg:w-2/5 xl:w-2/5 m-3 overflow-hidden rounded shadow-lg sm:w-full md:w-2/5">
-          <img src="https://picsum.photos/1000/600" alt="place" />
+          <img
+            src="https://picsum.photos/1000/600"
+            alt="place"
+            className="h-full w-full object-cover"
+          />
           <div className="m-1 px-6 py-2 text-4xl font-bold underline">
             <a href="nnnn">Example Title</a>
           </div>

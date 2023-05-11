@@ -20,7 +20,7 @@ function Modal({ isVisible, onClose, children }: Props) {
           role="button"
           tabIndex={0}
         >
-          <div className="flex w-[1046px] flex-col">
+          <div className="flex flex-col">
             <button
               type="button"
               className="place-self-end text-black"
@@ -29,7 +29,7 @@ function Modal({ isVisible, onClose, children }: Props) {
               X
             </button>
 
-            <div className=" bg-white p-2">{children}</div>
+            <div className=" h-[300px] w-[1046px] bg-white p-2">{children}</div>
           </div>
         </div>
       ) : null}
