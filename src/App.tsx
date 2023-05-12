@@ -5,7 +5,7 @@ import Navbar from './components/layout/Navbar';
 import SelectedPage from './shared/types';
 import Home from './components/pages/Home';
 import Portfolio from './components/pages/Portfolio';
-import ProjectDetailsCard from './shared/ProjectDetailsCard';
+// import ProjectDetailsCard from './shared/ProjectDetailsCard';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -35,7 +35,7 @@ function App() {
       />
       <Home setSelectedPage={setSelectedPage} />
       <Portfolio setSelectedPage={setSelectedPage} />
-      <ProjectDetailsCard />
+      {/* <ProjectDetailsCard /> */}
     </main>
   );
 }
