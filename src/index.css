@@ -13,3 +13,14 @@ body,
   font-family: 'Roboto', sans-serif;
   @apply text-gray-400; /*default text color*/
 }
+
+.card {
+  @apply min-h-[10rem] w-[636px] overflow-hidden rounded-md bg-white shadow-lg;
+}
+
+.badge {
+  @apply bg-gray-500 p-3 py-1 font-geometricsans text-xs font-medium text-white;
+}
+.project-btn {
+  @apply w-full bg-primary-300 px-2 py-2 text-center text-sm text-white transition-all duration-200 ease-out hover:bg-primary-100 focus:scale-95;
+}

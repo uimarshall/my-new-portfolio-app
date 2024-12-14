@@ -46,7 +46,8 @@ export default {
         rail: ['Raleway', 'sans-serif'],
       },
       content: {
-        patternbackground: 'url(./assets/background_pattern_bottom.png)',
+        patternbackgroundbottom: 'url(./assets/background_pattern_bottom.png)',
+        patternbackground: 'url(./assets/background_pattern.png)',
       },
     },
     screens: {

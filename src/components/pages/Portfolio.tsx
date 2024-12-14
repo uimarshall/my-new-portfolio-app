@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../layout/Header';
 import SelectedPage from '../../shared/types';
@@ -10,6 +10,7 @@ import Html from '../../assets/html-css-js.jpg';
 import Ruby from '../../assets/computers2.png';
 import NextJs from '../../assets/web-dev6.jpg';
 import Modal from '../../shared/Modal';
+// import ProjectDetailsCard from '../../shared/ProjectDetailsCard';
 
 // continue from 1:15
 type Props = {
@@ -50,7 +51,7 @@ function Portfolio({ setSelectedPage }: Props) {
           {projects.map(({ id, src }) => (
             <div
               key={id}
-              className="group relative rounded-lg bg-gradient-to-t from-gray-100 to-gray-400 shadow-md shadow-gray-600"
+              className="group relative rounded-lg bg-gradient-to-t from-gray-100 to-gray-400 shadow-md shadow-gray-600 md:z-10"
             >
               <div className="m-4 w-1/2 px-6 py-3">
                 <h3 className="text-1xl absolute left-5 top-5 font-geometricsans font-bold text-white">
@@ -75,7 +76,7 @@ function Portfolio({ setSelectedPage }: Props) {
                 src={src}
                 alt="developer"
                 className="inset-0 mx-auto rounded-md object-cover
-								duration-200 hover:scale-105 group-hover:opacity-50 "
+								duration-200 hover:scale-105 group-hover:opacity-50 md:z-10"
               />
 
               <div className="relative pl-3">
@@ -99,44 +100,13 @@ function Portfolio({ setSelectedPage }: Props) {
                   </div>
                 </div>
               </div>
-
-              {/* <div className="flex items-center justify-center">
-                <button
-                  type="button"
-                  className="m-4 w-1/2 px-6 py-3 duration-200 hover:scale-105"
-                >
-                  Demo
-                </button>
-                <button
-                  type="button"
-                  className="m-4 w-1/2 px-6 py-3 duration-200 hover:scale-105"
-                >
-                  Code
-                </button>
-              </div> */}
             </div>
           ))}
         </div>
 
         {/* GRID 3 COLS */}
       </motion.div>
-      <Modal isVisible={showModal} onClose={() => setShowModal(false)}>
-        {/* <Modal title="go on" /> */}
-
-        <div className="lg:w-2/5 xl:w-2/5 m-3 overflow-hidden rounded shadow-lg sm:w-full md:w-2/5">
-          <img
-            src="https://picsum.photos/1000/600"
-            alt="place"
-            className="h-full w-full object-cover"
-          />
-          <div className="m-1 px-6 py-2 text-4xl font-bold underline">
-            <a href="nnnn">Example Title</a>
-          </div>
-          <div>
-            <h1>Other contents goes here</h1>
-          </div>
-        </div>
-      </Modal>
+      <Modal isVisible={showModal} onClose={() => setShowModal(false)} />
     </section>
   );
 }

@@ -1,11 +1,13 @@
 /* eslint-disable react/jsx-no-useless-fragment */
+
+import ProjectDetailsCard from './ProjectDetailsCard';
+
 type Props = {
   isVisible: boolean;
   onClose: () => void;
-  children: React.ReactNode;
 };
 
-function Modal({ isVisible, onClose, children }: Props) {
+function Modal({ isVisible, onClose }: Props) {
   const handleClose = (e: { target: { id: string } }) => {
     if (e.target.id === 'close') onClose();
   };
@@ -29,7 +31,9 @@ function Modal({ isVisible, onClose, children }: Props) {
               X
             </button>
 
-            <div className=" h-[300px] w-[1046px] bg-white p-2">{children}</div>
+            <div className="flex h-[540px] w-[1046px] flex-col bg-white px-2 shadow-lg">
+              <ProjectDetailsCard />
+            </div>
           </div>
         </div>
       ) : null}

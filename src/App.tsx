@@ -5,6 +5,7 @@ import Navbar from './components/layout/Navbar';
 import SelectedPage from './shared/types';
 import Home from './components/pages/Home';
 import Portfolio from './components/pages/Portfolio';
+import Experience from './components/Experience';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -34,6 +35,8 @@ function App() {
       />
       <Home setSelectedPage={setSelectedPage} />
       <Portfolio setSelectedPage={setSelectedPage} />
+      <Experience />
+      {/* <ProjectDetailsCard /> */}
     </main>
   );
 }
