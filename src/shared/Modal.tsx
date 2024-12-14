@@ -31,7 +31,7 @@ function Modal({ isVisible, onClose }: Props) {
               X
             </button>
 
-            <div className="flex h-[540px] w-[1046px] flex-col bg-white p-2 shadow-lg">
+            <div className="flex h-[540px] w-[1046px] flex-col bg-white px-2 shadow-lg">
               <ProjectDetailsCard />
             </div>
           </div>

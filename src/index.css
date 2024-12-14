@@ -22,5 +22,5 @@ body,
   @apply bg-gray-500 p-3 py-1 font-geometricsans text-xs font-medium text-white;
 }
 .project-btn {
-  @apply w-full bg-primary-300 px-4 py-2 text-sm text-white;
+  @apply w-full bg-primary-300 px-2 py-2 text-center text-sm text-white transition-all duration-200 ease-out hover:bg-primary-100 focus:scale-95;
 }

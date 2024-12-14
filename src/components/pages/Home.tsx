@@ -5,6 +5,7 @@ import {
   AiFillMediumCircle,
   AiFillGithub,
 } from 'react-icons/ai';
+import { SiHackernoon } from 'react-icons/si';
 import { BsBoxArrowRight } from 'react-icons/bs';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import emoji from '../../assets/emoji_raised_hand.png';
@@ -44,19 +45,19 @@ function Home({ setSelectedPage }: Props) {
             }}
           >
             <div className="relative">
-              <div className="before:absolute before:-left-20 before:-top-20 before:z-[-1] md:before:content-patternbackground">
+              <div className="before:absolute before:-right-[710px] before:-top-4 before:z-[-1] md:before:content-patternbackground">
                 <img alt="home-page-text" src={emoji} />
               </div>
-              <p className="text-back py-4 font-geometricsans text-5xl font-bold text-black">
+              <p className="text-back py-4 font-geometricsans text-sm font-bold text-black xs:text-2xl sm:py-2 sm:text-3xl md:text-5xl">
                 Pretty code by ingenious person
               </p>
             </div>
 
-            <p className="mt-8 text-sm">
+            <p className="mt-3 text-sm md:mt-8">
               Hello I am a software developer! I can help you build a product,
-              featre or website. Look through some of my work and experience! If
-              you like what you see and have project you need coded, don’t
-              hesistate to contact me.
+              feature or website. Look through some of my work and experience!
+              If you like what you see and have project you need coded, don’t
+              hesitate to contact me.
             </p>
           </motion.div>
 
@@ -83,7 +84,7 @@ function Home({ setSelectedPage }: Props) {
               onClick={() => setSelectedPage(SelectedPage.Portfolio)}
               href={`#${SelectedPage.Portfolio}`}
             >
-              <p>My Works</p>
+              <p className="text-xs sm:text-base md:text-lg">My Works</p>
             </AnchorLink>
           </motion.div>
         </div>
@@ -93,7 +94,7 @@ function Home({ setSelectedPage }: Props) {
           className="flex basis-3/5 justify-center md:z-10
               md:ml-40 md:mt-16 md:justify-items-end"
         >
-          <img src={ProfileImg} alt="home-graphics" />
+          <img className="h-auto w-full" src={ProfileImg} alt="home-graphics" />
         </div>
       </motion.div>
       {/* SOCIAL MEDIA */}
@@ -104,6 +105,18 @@ function Home({ setSelectedPage }: Props) {
           <p className="text-sm">My works in social networks</p>
         </div>
         <div className={`${flexBetween} gap-4`}>
+          {/* <SocialMediaHandles href="https://www.educative.io/profile/view/5344369935777792l">
+            <SiEducative
+              style={style}
+              className="duration-200 hover:scale-150"
+            />
+          </SocialMediaHandles> */}
+          <SocialMediaHandles href="https://hackernoon.com/u/uimarshall">
+            <SiHackernoon
+              style={style}
+              className="duration-200 hover:scale-150"
+            />
+          </SocialMediaHandles>
           <SocialMediaHandles href="https://twitter.com/uimarshall">
             <AiFillTwitterCircle
               style={style}

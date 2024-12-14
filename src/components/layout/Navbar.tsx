@@ -77,6 +77,8 @@ function Navbar({ isTopOfPage, selectedPage, setSelectedPage }: Props) {
                 type="button"
                 className="rounded-full bg-primary-50 p-2"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
+                title="Toggle Menu"
+                aria-label="Toggle Menu"
               >
                 <Bars3Icon className="h-6 w-6 text-white" />
               </button>
@@ -92,6 +94,8 @@ function Navbar({ isTopOfPage, selectedPage, setSelectedPage }: Props) {
           <div className="flex justify-end p-12">
             <button
               type="button"
+              title="Close Menu"
+              aria-label="Toggle Menu"
               onClick={() => setIsMenuToggled(!isMenuToggled)}
             >
               <XMarkIcon className="h-6 w-6 rounded-full bg-gray-500 text-white" />

@@ -9,9 +9,9 @@ function ProjectDetailsCard() {
     <>
       <img src={Ruby} alt="Ruby" className="h-40 w-full object-cover" />
 
-      <div className="flex flex-col gap-3 p-4">
+      <div className="flex flex-col gap-3 p-4 md:flex-row">
         {/* Badge */}
-        <div className="flex w-3/5 flex-row items-center justify-stretch gap-2">
+        <div className="mx-3 flex w-3/5 flex-row items-center justify-stretch gap-2">
           <span className="block h-auto max-w-full">
             <img src={Dev} alt="dev" />
           </span>
@@ -22,13 +22,13 @@ function ProjectDetailsCard() {
             <img src={Dev} alt="dev" />
           </span>
         </div>
-        <div className="flex w-3/5 flex-grow flex-col gap-2">
-          <button className="project-btn" type="button">
+        <div className="mx-5 flex w-1/3 flex-grow-0 flex-col gap-2 md:gap-7">
+          <a href="proj" className="project-btn" type="button">
             btn 1
-          </button>
-          <button type="button" className="project-btn">
+          </a>
+          <a href="github" type="button" className="project-btn">
             btn 2
-          </button>
+          </a>
         </div>
       </div>
       {/* Project Title */}
@@ -41,10 +41,13 @@ function ProjectDetailsCard() {
         </div>
       </div>
 
-      <div className="flex justify-start px-5 py-2">
+      <div className="flex justify-start px-5">
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque,
-          exercitationem!
+          exercitationem! Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Eaque, exercitationem! Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Eaque, exercitationem!Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Eaque, exercitationem!
         </p>
       </div>
     </>
