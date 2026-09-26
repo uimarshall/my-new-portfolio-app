@@ -8,8 +8,8 @@ type Props = {
 };
 
 function Modal({ isVisible, onClose }: Props) {
-  const handleClose = (e: { target: { id: string } }) => {
-    if (e.target.id === 'close') onClose();
+  const handleClose = (e: React.MouseEvent | React.KeyboardEvent) => {
+    if ((e.target as HTMLElement).id === 'close') onClose();
   };
   return (
     <>
