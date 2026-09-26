@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,400;0,700;0,800;1,100;1,200;1,400;1,700;1,800&family=Roboto:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  @apply text-gray-400; /*default text color*/
+}
+
+.card {
+  @apply min-h-[10rem] w-[636px] overflow-hidden rounded-md bg-white shadow-lg;
+}
+
+.badge {
+  @apply bg-gray-500 p-3 py-1 font-geometricsans text-xs font-medium text-white;
+}
+.project-btn {
+  @apply w-full bg-primary-300 px-2 py-2 text-center text-sm text-white transition-all duration-200 ease-out hover:bg-primary-100 focus:scale-95;
+}
