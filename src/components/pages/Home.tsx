@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   AiFillTwitterCircle,
@@ -22,16 +23,17 @@ type Props = {
 function Home({ setSelectedPage }: Props) {
   const flexBetween = 'flex items-center justify-between';
   const style = { fontSize: '1.5em', borderRadius: '9999px' };
+  const [isBioExpanded, setIsBioExpanded] = useState(false);
 
   return (
     <section id="intro" className="bg-gray-20 gap-16 py-10 md:h-full md:pb-0">
       {/* IMAGE AND MAIN HEADER */}
       <motion.div
-        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
+        className="mx-auto w-5/6 items-center justify-center md:flex md:min-h-[83.333333%]"
         onViewportEnter={() => setSelectedPage(SelectedPage.Intro)}
       >
         {/* MAIN HEADER */}
-        <div className="z-10 mt-32 md:basis-3/5">
+        <div className="z-10 mt-32 self-start md:basis-3/5">
           {/* HEADINGS */}
           <motion.div
             className="md:-mt-20"
@@ -49,15 +51,40 @@ function Home({ setSelectedPage }: Props) {
                 <img alt="home-page-text" src={emoji} />
               </div>
               <p className="text-back py-4 font-geometricsans text-sm font-bold text-black xs:text-2xl sm:py-2 sm:text-3xl md:text-5xl">
-                Pretty code by ingenious person
+                Your business, built better for visibility.
               </p>
             </div>
 
             <p className="mt-3 text-sm md:mt-8">
-              Hello I am a software developer! I can help you build a product,
-              feature or website. Look through some of my work and experience!
-              If you like what you see and have project you need coded, don’t
-              hesitate to contact me.
+              Marshall, the creator of{' '}
+              <span className="text-primary-500">Goptant,</span> is a seasoned
+              senior software engineer, AI engineer, and data specialist who
+              builds high‑performance digital solutions for businesses.
+              {isBioExpanded && (
+                <>
+                  {' '}
+                  He works with modern technologies including JavaScript, React,
+                  Redux, TypeScript, Python, Node.js, and Ruby on Rails ,
+                  delivering scalable applications, automation tools, AI‑powered
+                  systems, and data‑driven solutions that help companies operate
+                  faster and smarter. With expertise spanning software
+                  engineering, artificial intelligence, data science, and data
+                  analysis, He transforms complex business challenges into
+                  clean, efficient, and user‑friendly products. His work is
+                  driven by a passion for innovation, problem‑solving, and
+                  helping businesses grow through intelligent technology. I can
+                  help you build a product or web app. Look through some of my
+                  work and experience! If you like what you see and have project
+                  you need coded, don’t hesitate to contact me.
+                </>
+              )}{' '}
+              <button
+                type="button"
+                className="font-bold text-primary-500 hover:underline"
+                onClick={() => setIsBioExpanded((prev) => !prev)}
+              >
+                {isBioExpanded ? 'Read less' : 'Read more'}
+              </button>
             </p>
           </motion.div>
 
