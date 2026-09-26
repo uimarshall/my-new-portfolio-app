@@ -4,6 +4,8 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: process.env.VITE_BASE_PATH || '/my-new-portfolio-app/',
+
   // resolve: {
   //   alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
   // },
