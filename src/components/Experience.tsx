@@ -19,6 +19,25 @@ function Experience() {
         visible: { opacity: 1, x: 0 },
       }}
     >
+      <section id="about" className="mx-auto w-5/6 py-12">
+        <Header>About Marshall</Header>
+        <p className="my-5">
+          Marshall is a senior full-stack software engineer, AI engineer, and
+          data specialist who builds high-performance digital solutions for
+          businesses. He works with modern technologies including JavaScript,
+          React, Redux, TypeScript, Python, Node.js, and Ruby on Rails,
+          delivering scalable applications, automation tools, AI-powered
+          systems, and data-driven solutions that help companies operate faster
+          and smarter.
+        </p>
+        <p className="my-5">
+          With expertise spanning software engineering, artificial intelligence,
+          data science, and data analysis, Marshall transforms complex business
+          challenges into clean, efficient, and user-friendly products. His work
+          is driven by a passion for innovation, problem-solving, and helping
+          businesses grow through intelligent technology.
+        </p>
+      </section>
       <section className="mx-auto w-5/6">
         <Header>The companies I&apos;ve worked with:</Header>
         <p className="my-5 py-3">
